@@ -41,12 +41,12 @@ const convertToUp = (word) => {
 const win = (userChoice, computerChoice) => {
   userScore++;
   userScoreSpan.innerHTML = userScore;
-  const randomWin = ["Great", "Awesome", "All Right!", "Cool"];
+  const randomWin = ["Great", "Awesome", "All Right", "Cool"];
   const randomNumber = Math.floor(Math.random() * 4);
   const winEmojis = ["😁", "💃🏽", "👏🏽", "😅", "😎", "🙌🏽"]
   const randomNumberEmoji = Math.floor(Math.random() * 6);
 
-  resultDiv.innerHTML = `${randomWin[randomNumber]}. You win! ${winEmojis[randomNumberEmoji]}`;
+  resultDiv.innerHTML = `${randomWin[randomNumber]}. You scored! ${winEmojis[randomNumberEmoji]}`;
 
   document.getElementById(userChoice).classList.add('win-border')
   setTimeout(() => document.getElementById(userChoice).classList.remove('win-border'), 600);
@@ -56,11 +56,11 @@ const win = (userChoice, computerChoice) => {
 const lose = (userChoice, computerChoice) => {
   computerScore++;
   computerScoreSpan.innerHTML = computerScore;
-  const randomWin = ["No", "Try Again!", "Oh no!", "Darn"];
+  const randomWin = ["No", "Try Again", "Oh no", "Darn"];
   const randomNumber = Math.floor(Math.random() * 4);
   const loseEmojis = ["😩", "😾", "💩", "😭", "😡", "🤨", "🤦🏽"]
   const randomNumberEmoji = Math.floor(Math.random() * 7);
-  resultDiv.innerHTML = `${randomWin[randomNumber]}. You lose! ${loseEmojis[randomNumberEmoji]}`;
+  resultDiv.innerHTML = `${randomWin[randomNumber]}. You missed! ${loseEmojis[randomNumberEmoji]}`;
 
   document.getElementById(userChoice).classList.add('lose-border');
   setTimeout(() => document.getElementById(userChoice).classList.remove('lose-border'), 600);
@@ -71,7 +71,9 @@ const lose = (userChoice, computerChoice) => {
 const tie = (userChoice, computerChoice) => {
   const tieEmojis = ["🤯", "😱", "🙈", "🧐", "🙀", "🙃"];
   const randomNumberEmoji = Math.floor(Math.random() * 6);
-  resultDiv.innerHTML = `${convertToUp(computerChoice)} matches ${convertToUp(userChoice)}. It's a tie! ${tieEmojis[randomNumberEmoji]}`;
+  const randomWin = ["No", "Try Again", "Oh no", "Darn"];
+  const randomNumber = Math.floor(Math.random() * 4);
+  resultDiv.innerHTML = `${randomWin[randomNumber]}. You missed! ${tieEmojis[randomNumberEmoji]}`;
 
   document.getElementById(userChoice).classList.add('tie-border');
   setTimeout(() => document.getElementById(userChoice).classList.remove('tie-border'), 600);

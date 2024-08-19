@@ -11,6 +11,14 @@ const rockDiv = document.getElementById("rock");
 const paperDiv = document.getElementById("paper");
 const scissorsDiv = document.getElementById("scissors");
 const shootDiv = document.getElementById("shoot");
+window.confirm("enjoy!");
+window.prompt("confirm you are not a robot")
+
+
+/* const sponsor = document.querySelector('.result');
+sponsor.innerHTML = '<h1>Sponsored by Sports Illustrated</h1>';
+sponsor.setAttribute('style', 'color: green'); */
+
 
 
 // Generating computer choice at random
@@ -60,7 +68,7 @@ const lose = (userChoice, computerChoice) => {
   const randomNumber = Math.floor(Math.random() * 4);
   const loseEmojis = ["😩", "😾", "💩", "😭", "😡", "🤨", "🤦🏽"]
   const randomNumberEmoji = Math.floor(Math.random() * 7);
-  resultDiv.innerHTML = `${randomWin[randomNumber]}. You missed! ${loseEmojis[randomNumberEmoji]}`;
+  resultDiv.innerHTML = `${randomWin(randomNumber)}. You missed! ${loseEmojis[randomNumberEmoji]}`;
 
   document.getElementById(userChoice).classList.add('lose-border');
   setTimeout(() => document.getElementById(userChoice).classList.remove('lose-border'), 600);

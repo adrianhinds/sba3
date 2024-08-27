@@ -12,7 +12,7 @@ const paperDiv = document.getElementById("paper");
 const scissorsDiv = document.getElementById("scissors");
 const shootDiv = document.getElementById("shoot");
 window.confirm("enjoy!");
-window.prompt("confirm you are not a robot")
+window.prompt("confirm you are not a robot");
 
 
 /* const sponsor = document.querySelector('.result');
@@ -122,6 +122,12 @@ const resetScores = () => {
   computerScoreSpan.innerHTML = computerScore
   userScore = 0;
   userScoreSpan.innerHTML = userScore;
+  if (userScore = 10) {
+    console.log("You Won")
+  }
+  if (computerScore = 10) {
+    console.log("You Lose")
+  }
 };
 
 const main = () => {

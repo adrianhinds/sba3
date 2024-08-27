@@ -19,9 +19,15 @@ heading.style.margin = "0px";
 const div1 = frag.appendChild(document.createElement("div"));
 let newEl = document.createElement('a');
 body.appendChild(newEl);
+function createPost(title, content) {
 const frag = document.createDocumentFragment();
 const heading = frag.appendChild(document.createElement("a4"))
 heading.textContent = title;
+heading.style.margin = "0px";
+div1.appendChild(document.createElement("p")).innerHTML = content
+
+return frag;
+}
 /* const sponsor = document.querySelector('.result');
 sponsor.innerHTML = '<h1>Sponsored by Sports Illustrated</h1>';
 sponsor.setAttribute('style', 'color: green'); */

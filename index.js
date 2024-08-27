@@ -13,8 +13,15 @@ const scissorsDiv = document.getElementById("scissors");
 const shootDiv = document.getElementById("shoot");
 window.confirm("enjoy!");
 window.prompt("confirm you are not a robot");
-
-
+const heading = frag.appendChild(document.createElement("h3"));
+heading.textContent = title;
+heading.style.margin = "0px";
+const div1 = frag.appendChild(document.createElement("div"));
+let newEl = document.createElement('a');
+body.appendChild(newEl);
+const frag = document.createDocumentFragment();
+const heading = frag.appendChild(document.createElement("a4"))
+heading.textContent = title;
 /* const sponsor = document.querySelector('.result');
 sponsor.innerHTML = '<h1>Sponsored by Sports Illustrated</h1>';
 sponsor.setAttribute('style', 'color: green'); */

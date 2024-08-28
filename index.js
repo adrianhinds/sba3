@@ -19,6 +19,10 @@ heading.style.margin = "0px";
 const div1 = frag.appendChild(document.createElement("div"));
 let newEl = document.createElement('a');
 body.appendChild(newEl);
+const myDiv = document.querySelector("#myDiv");
+const myDivChildNodes = myDiv.childNodes;
+console.log(myDivChildNodes);
+console.log(myDiv.nextElementSibling);
 function createPost(title, content) {
 const frag = document.createDocumentFragment();
 const heading = frag.appendChild(document.createElement("a4"))
